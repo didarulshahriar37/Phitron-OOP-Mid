@@ -5,7 +5,7 @@ class StudentDatabase:
     def add_student(self, student):
         for st in self.student_list:
             if st.student_id == student.student_id:
-                raise ValueError('Student already exists.')
+                raise ValueError(f'!!!!!! Student {st.student_id} already exists !!!!!!')
 
         self.student_list.append(student)
 
