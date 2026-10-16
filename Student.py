@@ -1,3 +1,5 @@
+from StudentDatabase import StudentDatabase
+
 class Student:
     def __init__(self, student_id, name, department, is_enrolled):
         self.__student_id = student_id
@@ -30,7 +32,7 @@ class Student:
 
     def drop_student(self):
         if not self.__is_enrolled:
-            raise ValueError('Student not found.')
+            raise ValueError('Student enrollment not found.')
         else:
             self.__is_enrolled = False
             print('Student dropped successfully..')
@@ -42,3 +44,13 @@ class Student:
             enrollment_status = 'Not enrolled'
 
         print(f'Student ID: {self.__student_id}\nName: {self.__name}\nDepartment: {self.__department}\nEnrollment Status: {enrollment_status}')
+
+student1 = Student('101', "Didarul Shahriar", "SWE", True)
+student2 = Student('102', "Shahriar Didarul", "CSE", False)
+student3 = Student('103', "Cristiano Ronaldo", "CEE", True)
+student4 = Student('104', "Ronaldo Jr.", "EEE", False)
+
+StudentDatabase.add_student(student1)
+StudentDatabase.add_student(student2)
+StudentDatabase.add_student(student3)
+StudentDatabase.add_student(student4)

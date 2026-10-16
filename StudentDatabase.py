@@ -1,9 +1,7 @@
-from Student import Student
-
 class StudentDatabase:
-    def __init__(self):
-        self.student_list = []
+    student_list = []
 
+    @classmethod
     def add_student(self, student):
         for st in self.student_list:
             if st.student_id == student.student_id:
@@ -11,6 +9,7 @@ class StudentDatabase:
 
         self.student_list.append(student)
 
+    @classmethod
     def view_all_students(self):
         if not self.student_list:
             print('No students found.')
