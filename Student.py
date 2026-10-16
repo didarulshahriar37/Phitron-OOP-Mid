@@ -48,8 +48,9 @@ class Student:
 student1 = Student('137', "Didarul Shahriar", "SWE", True)
 student2 = Student('138', "Shahriar Didarul", "CSE", False)
 student3 = Student('107', "Cristiano Ronaldo", "EEE", True)
-student4 = Student('110', "Leonel Messi", "BTM", False)
+student4 = Student('110', "Lionel Messi", "BTM", False)
 # student5 = Student('137', "Didarul Shahriar", "SWE", True)
+student6 = Student('108', "Toni Kroos", "ME", True)
 
 try:
     StudentDatabase.add_student(student1)
@@ -57,5 +58,6 @@ try:
     StudentDatabase.add_student(student3)
     StudentDatabase.add_student(student4)
     # StudentDatabase.add_student(student5)
+    StudentDatabase.add_student(student6)
 except ValueError as error:
     print(error)
