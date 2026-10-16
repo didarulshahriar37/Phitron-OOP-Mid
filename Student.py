@@ -1,11 +1,11 @@
 from StudentDatabase import StudentDatabase
 
 class Student:
-    def __init__(self, student_id, name, department, is_enrolled):
+    def __init__(self, student_id, name, department):
         self.__student_id = student_id
         self.__name = name
         self.__department = department
-        self.__is_enrolled = is_enrolled
+        self.__is_enrolled = False
 
     @property
     def student_id(self):
@@ -45,12 +45,12 @@ class Student:
 
         print(f'Student ID: {self.__student_id}\nName: {self.__name}\nDepartment: {self.__department}\nEnrollment Status: {enrollment_status}')
 
-student1 = Student('137', "Didarul Shahriar", "SWE", True)
-student2 = Student('138', "Shahriar Didarul", "CSE", False)
-student3 = Student('107', "Cristiano Ronaldo", "EEE", True)
-student4 = Student('110', "Lionel Messi", "BTM", False)
-# student5 = Student('137', "Didarul Shahriar", "SWE", True)
-student6 = Student('108', "Toni Kroos", "ME", True)
+student1 = Student('137', "Didarul Shahriar", "SWE")
+student2 = Student('138', "Shahriar Didarul", "CSE")
+student3 = Student('107', "Cristiano Ronaldo", "EEE")
+student4 = Student('110', "Lionel Messi", "BTM")
+# student5 = Student('137', "Didarul Shahriar", "SWE")
+student6 = Student('108', "Toni Kroos", "ME")
 
 try:
     StudentDatabase.add_student(student1)

@@ -2,15 +2,16 @@ from Student import Student
 from StudentDatabase import StudentDatabase
 
 while True:
+    print('\n\n--- Student Management Menu ---')
     print('1. View All Students\n2. Enroll Student\n3. Drop Student\n4. Exit')
     
-    option = input('Select an option: ')
+    option = input('Select an option (1-4): ')
 
     if option == '1':
         StudentDatabase.view_all_students()
 
     elif option == '2':
-        student_id = input('Enter Student ID: ')
+        student_id = input('Enter Student ID to enroll: ')
 
         student = None
 
@@ -28,7 +29,7 @@ while True:
                 print(error)
     
     elif option == '3':
-        student_id = input('Enter Student ID: ')
+        student_id = input('Enter Student ID to drop: ')
 
         student = None
         
