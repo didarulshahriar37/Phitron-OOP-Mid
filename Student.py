@@ -29,11 +29,16 @@ class Student:
             print('Student enrolled successfully..')
 
     def drop_student(self):
-        if self.__is_enrolled:
+        if not self.__is_enrolled:
             raise ValueError('Student not found.')
         else:
             self.__is_enrolled = False
             print('Student dropped successfully..')
 
     def view_student_info(self):
-        print(f'Student ID: {self.__student_id}\nName: {self.__name}\nDepartment: {self.__department}\nEnrollment Status: {self.__is_enrolled}')
+        if self.__is_enrolled:
+            enrollment_status = 'Enrolled'
+        else:
+            enrollment_status = 'Not enrolled'
+
+        print(f'Student ID: {self.__student_id}\nName: {self.__name}\nDepartment: {self.__department}\nEnrollment Status: {enrollment_status}')
